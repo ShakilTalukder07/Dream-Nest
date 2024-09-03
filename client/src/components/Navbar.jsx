@@ -8,6 +8,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { setLogout } from "../redux/state";
 
 
+
 const Navbar = () => {
   const [dropdownMenu, setDropdownMenu] = useState(false);
 
@@ -21,8 +22,8 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <a href="/">
-        <img src="/assets/logo.png" alt="logo" />
+      <a className="" href="/">
+        <img src="/assets/plane.jpg" alt="logo" />
       </a>
 
       <div className="navbar_search">
@@ -34,8 +35,8 @@ const Navbar = () => {
         />
         <IconButton disabled={search === ""}>
           <Search
-            sx={{ color: variables.pinkred }}
-            onClick={() => {navigate(`/properties/search/${search}`)}}
+            sx={{ color: variables.green }}
+            onClick={() => { navigate(`/properties/search/${search}`) }}
           />
         </IconButton>
       </div>

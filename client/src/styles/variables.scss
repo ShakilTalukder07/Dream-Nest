@@ -1,4 +1,4 @@
-$pinkred: #F8395A;
+$green: #00FF40;
 $blue: #24355A;
 $lightgrey: #F7F8F8;
 $grey: #bdb9b9;
@@ -11,7 +11,7 @@ $darkgrey: #969393;
 
 @mixin buttonStyle {
   padding: 10px 15px;
-  background-color: $pinkred;
+  background-color: $green;
   border: none;
   font-size: 20px;
   font-weight: 600;
@@ -22,7 +22,7 @@ $darkgrey: #969393;
 }
 
 :export {
-  pinkred: $pinkred;
+  green: $green;
   blue: $blue;
   lightgrey: $lightgrey;
   grey: $grey;

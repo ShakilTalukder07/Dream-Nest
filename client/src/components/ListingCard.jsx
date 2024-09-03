@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { TbCurrencyTaka } from "react-icons/tb";
 import "../styles/ListingCard.scss";
 import {
   ArrowForwardIos,
@@ -113,7 +114,8 @@ const ListingCard = ({
         <>
           <p>{type}</p>
           <p>
-            <span>${price}</span> per night
+            <span> <TbCurrencyTaka className="mt-2 text-xl"> </TbCurrencyTaka>
+            {price}</span> per night
           </p>
         </>
       ) : (
@@ -122,7 +124,8 @@ const ListingCard = ({
             {startDate} - {endDate}
           </p>
           <p>
-            <span>${totalPrice}</span> total
+            <span><TbCurrencyTaka className="mt-2 text-xl"> </TbCurrencyTaka>
+            {totalPrice}</span> total
           </p>
         </>
       )}

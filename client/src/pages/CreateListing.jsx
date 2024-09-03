@@ -154,9 +154,8 @@ const CreateListing = () => {
             <div className="category-list">
               {categories?.map((item, index) => (
                 <div
-                  className={`category ${
-                    category === item.label ? "selected" : ""
-                  }`}
+                  className={`category ${category === item.label ? "selected" : ""
+                    }`}
                   key={index}
                   onClick={() => setCategory(item.label)}
                 >
@@ -260,7 +259,7 @@ const CreateListing = () => {
                     sx={{
                       fontSize: "25px",
                       cursor: "pointer",
-                      "&:hover": { color: variables.pinkred },
+                      "&:hover": { color: variables.green },
                     }}
                   />
                   <p>{guestCount}</p>
@@ -271,7 +270,7 @@ const CreateListing = () => {
                     sx={{
                       fontSize: "25px",
                       cursor: "pointer",
-                      "&:hover": { color: variables.pinkred },
+                      "&:hover": { color: variables.green },
                     }}
                   />
                 </div>
@@ -287,7 +286,7 @@ const CreateListing = () => {
                     sx={{
                       fontSize: "25px",
                       cursor: "pointer",
-                      "&:hover": { color: variables.pinkred },
+                      "&:hover": { color: variables.green },
                     }}
                   />
                   <p>{bedroomCount}</p>
@@ -298,7 +297,7 @@ const CreateListing = () => {
                     sx={{
                       fontSize: "25px",
                       cursor: "pointer",
-                      "&:hover": { color: variables.pinkred },
+                      "&:hover": { color: variables.green },
                     }}
                   />
                 </div>
@@ -314,7 +313,7 @@ const CreateListing = () => {
                     sx={{
                       fontSize: "25px",
                       cursor: "pointer",
-                      "&:hover": { color: variables.pinkred },
+                      "&:hover": { color: variables.green },
                     }}
                   />
                   <p>{bedCount}</p>
@@ -325,7 +324,7 @@ const CreateListing = () => {
                     sx={{
                       fontSize: "25px",
                       cursor: "pointer",
-                      "&:hover": { color: variables.pinkred },
+                      "&:hover": { color: variables.green },
                     }}
                   />
                 </div>
@@ -341,7 +340,7 @@ const CreateListing = () => {
                     sx={{
                       fontSize: "25px",
                       cursor: "pointer",
-                      "&:hover": { color: variables.pinkred },
+                      "&:hover": { color: variables.green },
                     }}
                   />
                   <p>{bathroomCount}</p>
@@ -352,7 +351,7 @@ const CreateListing = () => {
                     sx={{
                       fontSize: "25px",
                       cursor: "pointer",
-                      "&:hover": { color: variables.pinkred },
+                      "&:hover": { color: variables.green },
                     }}
                   />
                 </div>
@@ -368,9 +367,8 @@ const CreateListing = () => {
             <div className="amenities">
               {facilities?.map((item, index) => (
                 <div
-                  className={`facility ${
-                    amenities.includes(item.name) ? "selected" : ""
-                  }`}
+                  className={`facility ${amenities.includes(item.name) ? "selected" : ""
+                    }`}
                   key={index}
                   onClick={() => handleSelectAmenities(item.name)}
                 >

@@ -24,7 +24,7 @@
     }
 
     h2 {
-      color: $pinkred;
+      color: $green;
     }
 
     hr {
@@ -76,13 +76,13 @@
         }
 
         &:hover {
-          border: 2px solid $pinkred;
+          border: 2px solid $green;
           background-color: $lightgrey;
         }
       }
 
       .selected {
-        border: 2px solid $pinkred;
+        border: 2px solid $green;
         background-color: $lightgrey;
       }
     }
@@ -116,13 +116,13 @@
         }
 
         &:hover {
-          border: 2px solid $pinkred;
+          border: 2px solid $green;
           background-color: $lightgrey;
         }
       }
 
       .selected {
-        border: 2px solid $pinkred;
+        border: 2px solid $green;
         background-color: $lightgrey;
       }
     }
@@ -149,6 +149,7 @@
         font-weight: 700;
         margin: 20px 0 10px;
       }
+
       input {
         border: 1px solid $grey;
         padding: 15px 30px;
@@ -201,7 +202,7 @@
     }
 
     h2 {
-      color: $pinkred;
+      color: $green;
     }
 
     hr {
@@ -239,13 +240,13 @@
         }
 
         &:hover {
-          border: 2px solid $pinkred;
+          border: 2px solid $green;
           background-color: $lightgrey;
         }
       }
 
       .selected {
-        border: 2px solid $pinkred;
+        border: 2px solid $green;
         background-color: $lightgrey;
       }
     }
@@ -277,7 +278,7 @@
           cursor: pointer;
 
           &:hover {
-            color: $pinkred;
+            color: $green;
           }
         }
       }
