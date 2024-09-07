@@ -42,8 +42,8 @@ const Navbar = () => {
       </div>
 
       <div className="navbar_right">
-        
-        {user.email=="shakil.talukder@gmail.com" ? (
+
+        {user.email == "shakil.talukder@gmail.com" ? (
           <a href="/create-listing" className="host">
             Become A Host
           </a>
@@ -79,7 +79,7 @@ const Navbar = () => {
           </div>
         )}
 
-        {dropdownMenu && user && (
+        {/* {dropdownMenu && user && (
           <div className="navbar_right_accountmenu">
             <Link to={`/${user._id}/trips`}>Trip List</Link>
             <Link to={`/${user._id}/wishList`}>Wish List</Link>
@@ -96,7 +96,42 @@ const Navbar = () => {
               Log Out
             </Link>
           </div>
+        )} */}
+
+        {dropdownMenu && user.email == "shakil.talukder@gmail.com" && (
+          <div className="navbar_right_accountmenu">
+           
+            <Link to={`/${user._id}/properties`}>Property List</Link>
+            <Link to={`/${user._id}/reservations`}>Reservation List</Link>
+            <Link to="/create-listing">Become A Host</Link>
+
+            <Link
+              to="/login"
+              onClick={() => {
+                dispatch(setLogout());
+              }}
+            >
+              Log Out
+            </Link>
+          </div>
         )}
+
+        {dropdownMenu && user.email !== "shakil.talukder@gmail.com" && (
+          <div className="navbar_right_accountmenu">
+             <Link to={`/${user._id}/trips`}>Trip List</Link>
+             <Link to={`/${user._id}/wishList`}>Wish List</Link>
+
+            <Link
+              to="/login"
+              onClick={() => {
+                dispatch(setLogout());
+              }}
+            >
+              Log Out
+            </Link>
+          </div>
+        )}
+
       </div>
     </div>
   );
