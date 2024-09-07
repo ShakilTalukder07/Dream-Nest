@@ -18,7 +18,7 @@
 
     .slider {
       display: flex;
-      transition: transform 0.5s ease;
+      transition: transform 0.2s ease;
 
       .slide {
         position: relative;
@@ -66,16 +66,16 @@
   }
 
   h3 {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   p {
-    font-size: 16px;
+    font-size: 12px;
   }
 
   span {
-    font-weight: 700;
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 14px;
   }
 
   .favorite {

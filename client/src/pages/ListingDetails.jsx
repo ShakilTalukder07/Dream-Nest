@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "../styles/ListingDetails.scss";
 import { useNavigate, useParams } from "react-router-dom";
 import { facilities } from "../data";
-
+import { TbCurrencyTaka } from "react-icons/tb";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import { DateRange } from "react-date-range";
@@ -167,15 +167,15 @@ const ListingDetails = () => {
               <DateRange ranges={dateRange} onChange={handleSelect} />
               {dayCount > 1 ? (
                 <h2>
-                  ${listing.price} x {dayCount} nights
+                  <TbCurrencyTaka className="mt-2 text-xl"> </TbCurrencyTaka>{listing.price} x {dayCount} nights
                 </h2>
               ) : (
                 <h2>
-                  ${listing.price} x {dayCount} night
+                  <TbCurrencyTaka className="mt-2 text-xl"> </TbCurrencyTaka>{listing.price} x {dayCount} night
                 </h2>
               )}
 
-              <h2>Total price: ${listing.price * dayCount}</h2>
+              <h2>Total price: <TbCurrencyTaka className="mt-2 text-xl"> </TbCurrencyTaka>{listing.price * dayCount}</h2>
               <p>Start Date: {dateRange[0].startDate.toDateString()}</p>
               <p>End Date: {dateRange[0].endDate.toDateString()}</p>
 

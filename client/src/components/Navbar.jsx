@@ -13,7 +13,7 @@ const Navbar = () => {
   const [dropdownMenu, setDropdownMenu] = useState(false);
 
   const user = useSelector((state) => state.user);
-
+  console.log(user.email);
   const dispatch = useDispatch();
 
   const [search, setSearch] = useState("")
@@ -42,13 +42,14 @@ const Navbar = () => {
       </div>
 
       <div className="navbar_right">
-        {user ? (
+        
+        {user.email=="shakil.talukder@gmail.com" ? (
           <a href="/create-listing" className="host">
             Become A Host
           </a>
         ) : (
           <a href="/login" className="host">
-            Become A Host
+            {/* Become A Host */}
           </a>
         )}
 
