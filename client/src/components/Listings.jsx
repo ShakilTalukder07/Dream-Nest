@@ -56,7 +56,7 @@ const Listings = () => {
         <Loader />
       ) : (
         <div className="listings">
-          {listings.map(
+          {listings && listings?.map(
             ({
               _id,
               creator,

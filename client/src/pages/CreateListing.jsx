@@ -408,7 +408,7 @@ const CreateListing = () => {
 
                     {photos.length >= 1 && (
                       <>
-                        {photos.map((photo, index) => {
+                        {photos?.map((photo, index) => {
                           return (
                             <Draggable
                               key={index}

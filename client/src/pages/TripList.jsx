@@ -35,6 +35,8 @@ const TripList = () => {
     getTripList();
   }, []);
 
+// console.log(tripList)
+
   return loading ? (
     <Loader />
   ) : (
@@ -42,7 +44,7 @@ const TripList = () => {
       <Navbar />
       <h1 className="title-list">Your Trip List</h1>
       <div className="list">
-        {tripList?.map(({ listingId, hostId, startDate, endDate, totalPrice, booking=true }) => (
+        {tripList && tripList?.map(({ listingId, hostId, startDate, endDate, totalPrice, booking=true }) => (
           <ListingCard
             listingId={listingId._id}
             creator={hostId._id}

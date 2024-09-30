@@ -13,7 +13,7 @@ const Navbar = () => {
   const [dropdownMenu, setDropdownMenu] = useState(false);
 
   const user = useSelector((state) => state.user);
-  console.log(user.email);
+  // console.log(user.email);
   const dispatch = useDispatch();
 
   const [search, setSearch] = useState("")
@@ -43,13 +43,13 @@ const Navbar = () => {
 
       <div className="navbar_right">
 
-        {user.email == "shakil.talukder@gmail.com" ? (
+        {user ? (
           <a href="/create-listing" className="host">
             Become A Host
           </a>
         ) : (
           <a href="/login" className="host">
-            {/* Become A Host */}
+            
           </a>
         )}
 
@@ -79,13 +79,13 @@ const Navbar = () => {
           </div>
         )}
 
-        {/* {dropdownMenu && user && (
+        {dropdownMenu && user && (
           <div className="navbar_right_accountmenu">
             <Link to={`/${user._id}/trips`}>Trip List</Link>
             <Link to={`/${user._id}/wishList`}>Wish List</Link>
             <Link to={`/${user._id}/properties`}>Property List</Link>
             <Link to={`/${user._id}/reservations`}>Reservation List</Link>
-            <Link to="/create-listing">Become A Host</Link>
+            {/* <Link to="/create-listing">Become A Host</Link> */}
 
             <Link
               to="/login"
@@ -96,9 +96,9 @@ const Navbar = () => {
               Log Out
             </Link>
           </div>
-        )} */}
+        )}
 
-        {dropdownMenu && user.email == "shakil.talukder@gmail.com" && (
+        {/* {dropdownMenu && user.email == "shakil.talukder@gmail.com" && (
           <div className="navbar_right_accountmenu">
            
             <Link to={`/${user._id}/properties`}>Property List</Link>
@@ -114,9 +114,9 @@ const Navbar = () => {
               Log Out
             </Link>
           </div>
-        )}
+        )} */}
 
-        {dropdownMenu && user.email !== "shakil.talukder@gmail.com" && (
+        {/* {dropdownMenu && user.email !== "shakil.talukder@gmail.com" && (
           <div className="navbar_right_accountmenu">
              <Link to={`/${user._id}/trips`}>Trip List</Link>
              <Link to={`/${user._id}/wishList`}>Wish List</Link>
@@ -130,7 +130,7 @@ const Navbar = () => {
               Log Out
             </Link>
           </div>
-        )}
+        )} */}
 
       </div>
     </div>
